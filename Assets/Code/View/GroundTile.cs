@@ -47,22 +47,27 @@ namespace JevLogin
                 !Exist(position + Vector2Int.up, tilemap))
             {
                 render.sprite = Middle;
-                gameObject.GetOrAddComponent<BoxCollider2D>();
+                AddBoxCollider(gameObject);
             }
             else if (Exist(position + Vector2Int.right, tilemap) &&
                 !Exist(position + Vector2Int.left, tilemap) &&
                 !Exist(position + Vector2Int.up, tilemap))
             {
                 render.sprite = Left;
-                gameObject.GetOrAddComponent<BoxCollider2D>();
+                AddBoxCollider(gameObject);
             }
             else if (!Exist(position + Vector2Int.right, tilemap) &&
                Exist(position + Vector2Int.left, tilemap) &&
                !Exist(position + Vector2Int.up, tilemap))
             {
                 render.sprite = Right;
-                gameObject.GetOrAddComponent<BoxCollider2D>();
+                AddBoxCollider(gameObject);
             }
+        }
+
+        private static void AddBoxCollider(GameObject gameObject)
+        {
+            gameObject.GetOrAddComponent<BoxCollider2D>();
         }
 
         private bool Exist(Vector2Int position, ITilemap tilemap)
