@@ -14,7 +14,7 @@ namespace JevLogin
 
             for (int x = 0; x < tilemap.Width; x++)
             {
-                for (int y = 0; y < tilemap.Height; y++)
+                for (int y = 0; y <= tilemap.Height; y++)
                 {
                     var cell = tilemap.GetCell(new Vector2Int(x, y));
 
@@ -43,6 +43,7 @@ namespace JevLogin
         public GameObject CreateEmpty(Vector2Int position)
         {
             var result = new GameObject(position.ToString());
+
             var transform = result.GetComponent<Transform>();
             transform.parent = GetComponent<Transform>();
             transform.localPosition = new Vector3(position.x, position.y, 0.0f);

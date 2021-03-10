@@ -55,7 +55,6 @@ namespace JevLogin
             {
                 render.sprite = Left;
                 gameObject.GetOrAddComponent<BoxCollider2D>();
-
             }
             else if (!Exist(position + Vector2Int.right, tilemap) &&
                Exist(position + Vector2Int.left, tilemap) &&
@@ -63,7 +62,6 @@ namespace JevLogin
             {
                 render.sprite = Right;
                 gameObject.GetOrAddComponent<BoxCollider2D>();
-
             }
         }
 

@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Linq;
-
+using System.Collections.Generic;
 
 namespace JevLogin
 {
@@ -45,6 +45,20 @@ namespace JevLogin
             {
                 return _cell;
             }
+        }
+
+        public Vector2[] GetClosedMesh()
+        {
+            List<Vector2> points = new List<Vector2>();
+            for (int x = 0; x < Width; x++)
+            {
+                points.Add(new Vector2(x - 0.5f, _heights[x] + 0.5f));
+                points.Add(new Vector2(x + 0.5f, _heights[x] + 0.5f));
+            }
+            points.Add(new Vector2(Width - 0.5f, -0.5f));
+            points.Add(new Vector2(-0.5f, -0.5f));
+
+            return points.ToArray();
         }
     }
 }
