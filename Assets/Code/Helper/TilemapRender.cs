@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System.Linq;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,10 +10,7 @@ namespace JevLogin
     {
         public void Render(ITilemap tilemap)
         {
-            foreach (Transform child in transform)
-            {
-                Destroy(child.gameObject);
-            }
+            Clear();
 
             for (int x = 0; x < tilemap.Width; x++)
             {
@@ -27,6 +25,18 @@ namespace JevLogin
                         cell.Refresh(new Vector2Int(x, y), tilemap, cellGo);
                     }
                 }
+            }
+        }
+
+        public void Clear()
+        {
+            foreach (Transform child in transform.OfType<Transform>().ToList())
+            {
+#if UNITY_EDITOR
+                DestroyImmediate(child.gameObject);
+#else
+                Destroy(child.gameObject);
+#endif
             }
         }
 

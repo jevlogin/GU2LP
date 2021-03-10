@@ -9,15 +9,30 @@ namespace JevLogin
         [SerializeField] private int _width;
         [SerializeField] private int _widthMinimalPlatform;
         [SerializeField] private GroundTile _groundTile;
+        [SerializeField] private bool _isGenerateOnStart = false;
+        private TilemapRender _tilemapRender;
 
         private void Start()
         {
-           var tileMap =  Cenerate();
-            GetComponent<TilemapRender>().Render(tileMap);
+            if (_isGenerateOnStart)
+            {
+                GenerateAndRenderer(); 
+            }
         }
 
+        public void GenerateAndRenderer()
+        {
+            var tileMap = Cenerate();
+            _tilemapRender = GetComponent<TilemapRender>();
+            _tilemapRender.Render(tileMap);
+        }
 
-        public ITilemap Cenerate()
+        public void Clear()
+        {
+            _tilemapRender.Clear();
+        }
+
+        private ITilemap Cenerate()
         {
             int groundHeight = _height;
 
@@ -29,14 +44,8 @@ namespace JevLogin
                 {
                     groundHeight += Random.Range(-1, 2);
                 }
-                
-                tilemap.SetHeight(x, groundHeight);
 
-                //for (int y = groundHeight; y > 0; y--)
-                //{
-                //    var cell = Instantiate(Cell, Zero);
-                //    cell.transform.localPosition = new Vector3(x, y, 0.0f);
-                //}
+                tilemap.SetHeight(x, groundHeight);
             }
 
             return tilemap;
