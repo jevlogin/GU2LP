@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 namespace JevLogin
@@ -36,6 +37,8 @@ namespace JevLogin
         public Sprite GrassHillRight2;
         public Sprite GrassHillRight2_DownShadow;
 
+        [SerializeField] private PhysicsMaterial2D _physicsMaterial2D;
+
 
         public void Refresh(Vector2Int position, ITilemap tilemap, GameObject gameObject)
         {
@@ -53,16 +56,23 @@ namespace JevLogin
                 !Exist(position + Vector2Int.left, tilemap) &&
                 !Exist(position + Vector2Int.up, tilemap))
             {
-                render.sprite = Left;
-                AddBoxCollider(gameObject);
+                render.sprite = GrassHillLeft;
+
+                AddPoliginCollider(gameObject);
             }
             else if (!Exist(position + Vector2Int.right, tilemap) &&
                Exist(position + Vector2Int.left, tilemap) &&
                !Exist(position + Vector2Int.up, tilemap))
             {
-                render.sprite = Right;
-                AddBoxCollider(gameObject);
+                render.sprite = GrassHillRight;
+                AddPoliginCollider(gameObject);
             }
+        }
+
+        private void AddPoliginCollider(GameObject gameObject)
+        {
+            var polygonCollider = gameObject.GetOrAddComponent<PolygonCollider2D>();
+            polygonCollider.sharedMaterial = _physicsMaterial2D;
         }
 
         private static void AddBoxCollider(GameObject gameObject)
