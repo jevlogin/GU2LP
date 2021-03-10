@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8612f3497f110d24abaaaee258ae1c84, type: 3}
+  m_Name: PlayerData
+  m_EditorClassIdentifier: 
+  PlayerStruct:
+    SpawnPlayer: {fileID: 8144940930038477657, guid: 179f8cd05cbab6241950945ee5ac63e2, type: 3}
+    AnimState: 0
+    WalkSpeed: 250
+    AnimationSpeed: 10
+    JumpForce: 8
+    JumpTresh: 0.127
+    MovingThrash: 0.127
+    FlyThresh: 0.1
+    GroundLevel: 0.5
+    _healthPoint: 100
+    LeftScale: {x: -1, y: 1, z: 1}
+    RightScale: {x: 1, y: 1, z: 1}
+    YVelocity: 0
+    DoJump: 0
+  PlayerComponents:
+    SpriteRenderer: {fileID: 0}
+    CircleCollider2D: {fileID: 0}
+    TransformPlayer: {fileID: 0}
+    RigidbodyPlayer: {fileID: 0}
+    LevelObjectView: {fileID: 0}
+    PlayerView: {fileID: 0}
+  PlayerSettingsData:
+    SortingOrderSpriteRenderer: 1
+    _spriteAnimatorPath: Player/SpriteAnimatorConfig

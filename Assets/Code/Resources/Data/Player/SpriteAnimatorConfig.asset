@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606158ec8c654f24584633c241c18eba, type: 3}
+  m_Name: SpriteAnimatorConfig
+  m_EditorClassIdentifier: 
+  SpriteSequences:
+  - AnimState: 0
+    Sprites:
+    - {fileID: 21300000, guid: 9b62c7a0f8f08454bac35b8f6f4a8a32, type: 3}
+    - {fileID: 21300000, guid: c0451278713873c419c38fb47d24d956, type: 3}
+    - {fileID: 21300000, guid: c0451278713873c419c38fb47d24d956, type: 3}
+    - {fileID: 21300000, guid: 1c0aad5885a6a1e4f8828948b203a9e0, type: 3}
+    - {fileID: 21300000, guid: 6342ee770bf78b1418553bb43b5af0d6, type: 3}
+    - {fileID: 21300000, guid: e95455510f2b2954a8e74dc1aef75b98, type: 3}
+    - {fileID: 21300000, guid: adc0b6139a13f0149aac43683d189092, type: 3}
+  - AnimState: 1
+    Sprites:
+    - {fileID: 21300000, guid: 73ec84386d33c0c42acc03f309edf33a, type: 3}
+    - {fileID: 21300000, guid: 06a61bee43b3b374184852a268d07ef7, type: 3}
+    - {fileID: 21300000, guid: 2f31db1a46e8fe44eb7b5f993ac42276, type: 3}
+    - {fileID: 21300000, guid: c816b66468d182d4aa897ec85ba5a734, type: 3}
+    - {fileID: 21300000, guid: 10d7417bc59f5d84aac994819a284705, type: 3}
+    - {fileID: 21300000, guid: 8254dd60724fcb44eb32b3e39031f523, type: 3}
+    - {fileID: 21300000, guid: 54db2137e8e3b024ebc55b0eb89ddc85, type: 3}
+    - {fileID: 21300000, guid: 87dde8e5b672c4a428723cd2b52396b9, type: 3}
+  - AnimState: 2
+    Sprites:
+    - {fileID: 21300000, guid: 81d70aefa6fd97f45830beee6c135eb5, type: 3}
+    - {fileID: 21300000, guid: 180ed7d46ca89aa48b3e22335f40fd43, type: 3}
+    - {fileID: 21300000, guid: fb5b52f0375cc094d86bbe36ff301a85, type: 3}
+    - {fileID: 21300000, guid: a1b9f2506e6f0c44ba1000e3820d2c96, type: 3}
+    - {fileID: 21300000, guid: 5ac44063a03ae19499064571d60b3a3b, type: 3}
+    - {fileID: 21300000, guid: 6c591e9f11fcbfe4ab5939ad78d8a3a7, type: 3}
+  - AnimState: 3
+    Sprites:
+    - {fileID: 21300000, guid: 3fd7bfda03c0f20429e2167dfb5a24ae, type: 3}
+    - {fileID: 21300000, guid: 85ca832bb1d2224449250e228d0b3e05, type: 3}
+    - {fileID: 21300000, guid: 4bd8a26deac5f5b48b23a01c3faa4211, type: 3}
+    - {fileID: 21300000, guid: 0e03bcb93c958774cb8eabb02fc85f38, type: 3}
+    - {fileID: 21300000, guid: e5dbe84cafa710740813c00304757113, type: 3}
+    - {fileID: 21300000, guid: d9ae849fe7b797a4499972d79ff95a14, type: 3}
+  - AnimState: 4
+    Sprites:
+    - {fileID: 21300000, guid: d392a30618f4cb54d83dcfae312c9369, type: 3}
+    - {fileID: 21300000, guid: ed113d0d0da2e0341a8bb1e1ed8446c0, type: 3}
+    - {fileID: 21300000, guid: 7fc03b6f4d06bf94e89e46aac1d41da7, type: 3}
+    - {fileID: 21300000, guid: d27e604c8adf8db4bbfb63386baca637, type: 3}
+    - {fileID: 21300000, guid: c5c1a5cd449c81a42a4b4b93064daf77, type: 3}
+    - {fileID: 21300000, guid: b24f7713fc292df439c0f89ff43e5ec3, type: 3}
+    - {fileID: 21300000, guid: 8ddef0e18c16185408749a4402d8b3ec, type: 3}
