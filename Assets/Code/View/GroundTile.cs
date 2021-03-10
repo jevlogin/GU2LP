@@ -60,12 +60,24 @@ namespace JevLogin
 
                 AddPoliginCollider(gameObject);
             }
+            else if (Exist(position + Vector2Int.right, tilemap) &&
+                Exist(position + Vector2Int.left, tilemap) &&
+                !Exist(position + Vector2Int.up + Vector2Int.left, tilemap))
+            {
+                render.sprite = GrassHillLeft2;
+            }
             else if (!Exist(position + Vector2Int.right, tilemap) &&
                Exist(position + Vector2Int.left, tilemap) &&
                !Exist(position + Vector2Int.up, tilemap))
             {
                 render.sprite = GrassHillRight;
                 AddPoliginCollider(gameObject);
+            }
+            else if (Exist(position + Vector2Int.right, tilemap) &&
+               Exist(position + Vector2Int.left, tilemap) &&
+               !Exist(position + Vector2Int.up + Vector2Int.right, tilemap))
+            {
+                render.sprite = GrassHillRight2;
             }
         }
 
