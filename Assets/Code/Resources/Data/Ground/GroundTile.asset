@@ -31,3 +31,18 @@ MonoBehaviour:
   GrassHillRight2_DownShadow: {fileID: 21300000, guid: 8b9f7b98aa858544a9bca8c25c24970f,
     type: 3}
   _physicsMaterial2D: {fileID: 6200000, guid: deb82c51a0400184ebad1820efa586ef, type: 2}
+  _environments:
+  - {fileID: -2753597471096352698, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -446867404522521166, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: 5089713165793692188, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: 2713915087196460949, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -4500993874483076431, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -5508807443964245338, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: 3062189330265537062, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -2994877863233710035, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: 1648749068166103451, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: 5357120858899214548, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -1748565696620533181, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -3610254309448376044, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -7963306881671151232, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}
+  - {fileID: -420011917627683574, guid: aada5ad328eb9974981ed28a80ae1277, type: 3}

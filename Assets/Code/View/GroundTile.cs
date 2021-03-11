@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -38,6 +38,7 @@ namespace JevLogin
         public Sprite GrassHillRight2_DownShadow;
 
         [SerializeField] private PhysicsMaterial2D _physicsMaterial2D;
+        [SerializeField] private List<Sprite> _environments = new List<Sprite>();
 
 
         public void Refresh(Vector2Int position, ITilemap tilemap, GameObject gameObject)
@@ -51,6 +52,21 @@ namespace JevLogin
             {
                 render.sprite = Middle;
                 AddBoxCollider(gameObject);
+
+                if (Exist(position + Vector2Int.right * 2, tilemap) &&
+                    Exist(position + Vector2Int.left * 2, tilemap) &&
+                    !Exist(position + Vector2Int.up + Vector2Int.left, tilemap) &&
+                    !Exist(position + Vector2Int.up + Vector2Int.right, tilemap)
+                    )
+                {
+                    var random = Random.Range(0, _environments.Count);
+                    var environments = new GameObject(_environments[random].name);
+                    environments.transform.SetParent(render.transform);
+                    environments.transform.position = render.transform.position;
+                    var renderer = environments.GetOrAddComponent<SpriteRenderer>();
+                    renderer.sprite = _environments[random];
+                    renderer.sortingOrder = 1;
+                }
             }
             else if (Exist(position + Vector2Int.right, tilemap) &&
                 !Exist(position + Vector2Int.left, tilemap) &&
