@@ -114,7 +114,8 @@ namespace JevLogin
             _controller.Add(coinsManager);
 
 
-            var levelComplete = new LevelCompleteManager(playerInitialization.GetPlayerModel().PlayerComponents.PlayerView, _listWaterViews.ToList<ICollisionDetect>(), _winZonesList.ToList<ICollisionDetect>());
+            var levelComplete = new LevelCompleteManager(playerInitialization.GetPlayerModel().PlayerComponents.PlayerView, 
+                _listWaterViews.ToList<ICollisionDetect>(), _winZonesList.ToList<ICollisionDetect>());
         }
 
         private void Start()
