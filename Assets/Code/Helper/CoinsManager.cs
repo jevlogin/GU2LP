@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace JevLogin
 {
     public sealed class CoinsManager : IEmptyInitialization, ICleanup
@@ -31,7 +32,7 @@ namespace JevLogin
                 if (_coinViews.Contains(coinView))
                 {
                     _spriteAnimatorController.StopAnimation(coinView.SpriteRenderer);
-                    GameObject.Destroy(coinView.gameObject);
+                    Object.Destroy(coinView.gameObject);
                 }
             }
 

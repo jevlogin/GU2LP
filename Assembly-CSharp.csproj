@@ -127,6 +127,7 @@
     <Compile Include="Assets\Code\View\GunView.cs" />
     <Compile Include="Assets\Code\View\PlayerView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
+    <Compile Include="Assets\WinView.cs" />
     <Reference Include="UnityEngine">
       <HintPath>F:/Program Files/Unity Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

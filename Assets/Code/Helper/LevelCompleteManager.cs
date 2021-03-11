@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -9,10 +10,10 @@ namespace JevLogin
     {
         private Vector3 _startPosition;
         private PlayerView _playerView;
-        private List<LevelObjectView> _deathZones;
-        private List<LevelObjectView> _winZones;
+        private List<ICollisionDetect> _deathZones;
+        private List<ICollisionDetect> _winZones;
 
-        public LevelCompleteManager(PlayerView playerView, List<LevelObjectView> deathZones, List<LevelObjectView> winZones)
+        public LevelCompleteManager(PlayerView playerView, List<ICollisionDetect> deathZones, List<ICollisionDetect> winZones)
         {
             _playerView = playerView;
             
@@ -25,14 +26,17 @@ namespace JevLogin
 
         private void _playerView_CollisionDetectChange(Collider2D collider)
         {
-            if (collider.TryGetComponent(out LevelObjectView levelObjectView))
+            if (collider.TryGetComponent(out ICollisionDetect levelObjectView))
             {
                 if (_deathZones.Contains(levelObjectView))
                 {
                     _playerView.transform.position = _startPosition;
                 }
+                if (_winZones.Contains(levelObjectView))
+                {
+                    Debug.Log("You Win!");
+                }
             }
-            
         }
 
         public void Cleanup()
