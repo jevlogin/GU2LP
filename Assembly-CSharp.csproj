@@ -73,6 +73,9 @@
     <Compile Include="Assets\Code\Controller\GameController.cs" />
     <Compile Include="Assets\Code\Controller\GenericObjectPool.cs" />
     <Compile Include="Assets\Code\Controller\GunBulletShooterController.cs" />
+    <Compile Include="Assets\Code\Controller\HeightMapBasedTilemap.cs" />
+    <Compile Include="Assets\Code\Controller\ICell.cs" />
+    <Compile Include="Assets\Code\Controller\ITilemap.cs" />
     <Compile Include="Assets\Code\Controller\InputController.cs" />
     <Compile Include="Assets\Code\Controller\InputInitialization.cs" />
     <Compile Include="Assets\Code\Controller\PCInputHorizontal.cs" />
@@ -84,6 +87,7 @@
     <Compile Include="Assets\Code\Controller\PlayerMoveController.cs" />
     <Compile Include="Assets\Code\Controller\Pool.cs" />
     <Compile Include="Assets\Code\Controller\SpriteAnimatorController.cs" />
+    <Compile Include="Assets\Code\Controller\TerrainGenerator.cs" />
     <Compile Include="Assets\Code\Controller\WaterManager.cs" />
     <Compile Include="Assets\Code\Extentions\Extentions.cs" />
     <Compile Include="Assets\Code\Helper\AnimState.cs" />
@@ -95,6 +99,7 @@
     <Compile Include="Assets\Code\Helper\ManagerAxis.cs" />
     <Compile Include="Assets\Code\Helper\ManagerName.cs" />
     <Compile Include="Assets\Code\Helper\ManagerPath.cs" />
+    <Compile Include="Assets\Code\Helper\TilemapRender.cs" />
     <Compile Include="Assets\Code\Interface\ICleanup.cs" />
     <Compile Include="Assets\Code\Interface\ICollisionDetect.cs" />
     <Compile Include="Assets\Code\Interface\IController.cs" />
@@ -118,9 +123,11 @@
     <Compile Include="Assets\Code\ScriptableObjects\PlayerData.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\SpriteAnimatorConfig.cs" />
     <Compile Include="Assets\Code\View\BulletView.cs" />
+    <Compile Include="Assets\Code\View\GroundTile.cs" />
     <Compile Include="Assets\Code\View\GunView.cs" />
     <Compile Include="Assets\Code\View\PlayerView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
+    <Compile Include="Assets\WinView.cs" />
     <Reference Include="UnityEngine">
       <HintPath>F:/Program Files/Unity Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

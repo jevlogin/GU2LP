@@ -17,21 +17,29 @@ namespace JevLogin
         #region REFACTORING
 
         //TODO переделать
+        [Header("Background and Paralax effect"), Space(5)]
         [SerializeField] private List<Transform> _backGround = new List<Transform>();
+        
+        [Header("Gun List"), Space(5)]
         [SerializeField] private List<GunView> _gunViews = new List<GunView>();
+
+        [Header("Конфиги спрайтов."), Space(5)]
         [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigCoins;
         
         [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigWater1;
         [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigWater2;
         [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigWater3;
 
+        [Header("Списки монет и воды."), Space(5)]
         [SerializeField] private List<CoinView> _coinsList;
         [SerializeField] private List<WaterView> _listWaterViews;
 
+        [Header("Зона смерти и выигрыша."), Space(5), SerializeField] private List<WinView> _winZonesList;
+
         #endregion
 
-        private Camera _camera;
         private Controllers _controller;
+        private Camera _camera;
 
         #endregion
 
@@ -104,6 +112,9 @@ namespace JevLogin
 
             var coinsManager = new CoinsManager(playerInitialization.GetPlayerModel(), coinsSpriteAnimatorController, _coinsList);
             _controller.Add(coinsManager);
+
+
+            var levelComplete = new LevelCompleteManager(playerInitialization.GetPlayerModel().PlayerComponents.PlayerView, _listWaterViews.ToList<ICollisionDetect>(), _winZonesList.ToList<ICollisionDetect>());
         }
 
         private void Start()
