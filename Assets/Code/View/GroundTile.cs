@@ -39,6 +39,7 @@ namespace JevLogin
 
         [SerializeField] private PhysicsMaterial2D _physicsMaterial2D;
         [SerializeField] private List<Sprite> _environments = new List<Sprite>();
+        [SerializeField] private List<EnvironmentView> _environmentsView = new List<EnvironmentView>();
 
 
         public void Refresh(Vector2Int position, ITilemap tilemap, GameObject gameObject)
@@ -60,12 +61,16 @@ namespace JevLogin
                     )
                 {
                     var random = Random.Range(0, _environments.Count);
+                    /*
                     var environments = new GameObject(_environments[random].name);
                     environments.transform.SetParent(render.transform);
                     environments.transform.position = render.transform.position;
                     var renderer = environments.GetOrAddComponent<SpriteRenderer>();
                     renderer.sprite = _environments[random];
                     renderer.sortingOrder = 1;
+                    */
+                    var environments = Instantiate(_environmentsView[random], render.transform);
+                    environments.transform.position = render.transform.position.Change(y: render.transform.position.y + environments.Offset);
                 }
             }
             else if (Exist(position + Vector2Int.right, tilemap) &&

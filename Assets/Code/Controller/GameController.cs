@@ -76,6 +76,7 @@ namespace JevLogin
             listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater);
             listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater2);
             listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater3);
+            listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater);
 
             var waterManager = new WaterManager(playerInitialization.GetPlayerModel(), listSpriteAnimatorControllerWater, _listWaterViews);
             _controller.Add(waterManager);

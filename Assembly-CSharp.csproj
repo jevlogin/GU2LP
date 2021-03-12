@@ -127,7 +127,14 @@
     <Compile Include="Assets\Code\View\GunView.cs" />
     <Compile Include="Assets\Code\View\PlayerView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
+    <Compile Include="Assets\EnvironmentView.cs" />
     <Compile Include="Assets\WinView.cs" />
+    <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_1\TXT\readme.txt" />
+    <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_2\TXT\readme.txt" />
+    <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_1\TXT\license.txt" />
+    <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_2\TXT\license.txt" />
+    <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_3\TXT\readme.txt" />
+    <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_3\TXT\license.txt" />
     <Reference Include="UnityEngine">
       <HintPath>F:/Program Files/Unity Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
