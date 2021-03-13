@@ -136,7 +136,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 2.73}
-  m_Target: {x: 16.2, y: -3.95}
+  m_Target: {x: 3.1100004, y: 11.93}
   m_AutoConfigureTarget: 1
   m_MaxForce: 10000
   m_DampingRatio: 0.2
@@ -156,7 +156,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 2.73}
-  m_ConnectedAnchor: {x: 16.2, y: -1.22}
+  m_ConnectedAnchor: {x: 3.1100004, y: 14.66}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -284,7 +284,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.35}
-  m_ConnectedAnchor: {x: 16.18, y: -1.2411457}
+  m_ConnectedAnchor: {x: 3.09, y: 14.638855}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 50

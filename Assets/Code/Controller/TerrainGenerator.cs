@@ -25,7 +25,7 @@ namespace JevLogin
             var tileMap = Cenerate();
             _tilemapRender = GetComponent<TilemapRender>();
             _tilemapRender.Render(tileMap);
-            //gameObject.GetOrAddComponent<PolygonCollider2D>().points = tileMap.GetClosedMesh();
+            gameObject.GetOrAddComponent<PolygonCollider2D>().points = tileMap.GetClosedMesh();
         }
 
         public void Clear()

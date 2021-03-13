@@ -57,18 +57,9 @@ namespace JevLogin
                 if (Exist(position + Vector2Int.right * 2, tilemap) &&
                     Exist(position + Vector2Int.left * 2, tilemap) &&
                     !Exist(position + Vector2Int.up + Vector2Int.left, tilemap) &&
-                    !Exist(position + Vector2Int.up + Vector2Int.right, tilemap)
-                    )
+                    !Exist(position + Vector2Int.up + Vector2Int.right, tilemap))
                 {
                     var random = Random.Range(0, _environments.Count);
-                    /*
-                    var environments = new GameObject(_environments[random].name);
-                    environments.transform.SetParent(render.transform);
-                    environments.transform.position = render.transform.position;
-                    var renderer = environments.GetOrAddComponent<SpriteRenderer>();
-                    renderer.sprite = _environments[random];
-                    renderer.sortingOrder = 1;
-                    */
                     var environments = Instantiate(_environmentsView[random], render.transform);
                     environments.transform.position = render.transform.position.Change(y: render.transform.position.y + environments.Offset);
                 }

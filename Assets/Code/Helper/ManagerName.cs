@@ -5,6 +5,7 @@ namespace JevLogin
         public const string SPRITE_ANIMATOR_CONFIG = "SpriteAnimatorConfig";
         public const string ENEMY_DATA = "EnemyData";
         public const string PLAYER_DATA = "PlayerData";
+        public const string WATER_DATA = "WaterData";
         public const string POOL_BULLETS = "PoolBullets";
     }
 }

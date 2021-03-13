@@ -70,7 +70,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 2
   m_Sprite: {fileID: 5089713165793692188, guid: aada5ad328eb9974981ed28a80ae1277,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,5 +96,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpriteRenderer: {fileID: 3858379340708219958}
-  SortingOrder: 5
+  SortingOrder: 2
   Offset: 0.462

@@ -19,16 +19,12 @@ namespace JevLogin
         //TODO переделать
         [Header("Background and Paralax effect"), Space(5)]
         [SerializeField] private List<Transform> _backGround = new List<Transform>();
-        
+
         [Header("Gun List"), Space(5)]
         [SerializeField] private List<GunView> _gunViews = new List<GunView>();
 
-        [Header("Конфиги спрайтов."), Space(5)]
+        [Header("Конфиги спрайтов. Монеты"), Space(5)]
         [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigCoins;
-        
-        [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigWater1;
-        [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigWater2;
-        [SerializeField] private SpriteAnimatorConfig _spriteAnimatorConfigWater3;
 
         [Header("Списки монет и воды."), Space(5)]
         [SerializeField] private List<CoinView> _coinsList;
@@ -40,6 +36,8 @@ namespace JevLogin
 
         private Controllers _controller;
         private Camera _camera;
+
+        public Controllers Controller { get => _controller; set => _controller = value; }
 
         #endregion
 
@@ -55,8 +53,14 @@ namespace JevLogin
             var paralaxManager = new ParalaxManager(_camera.transform, _backGround);
             _controller.Add(paralaxManager);
 
+            #region InputController
+
             var inputInitialization = new InputInitialization();
             _controller.Add(inputInitialization);
+
+            _controller.Add(new InputController(inputInitialization.GetInputProxy(), inputInitialization.GetInputMouse()));
+
+            #endregion
 
             var playerFactory = new PlayerFactory(_data.PlayerData);
             var playerInitialization = new PlayerInitialization(playerFactory);
@@ -64,29 +68,26 @@ namespace JevLogin
             var cameraController = new CameraController(_camera, playerInitialization.GetPlayerModel().PlayerComponents.TransformPlayer);
             _controller.Add(cameraController);
 
-            //TODO  Water - вынести в фабрику
-            var spriteAnimatorControllerWater = new SpriteAnimatorController(_spriteAnimatorConfigWater1);
-            var spriteAnimatorControllerWater2 = new SpriteAnimatorController(_spriteAnimatorConfigWater2);
-            var spriteAnimatorControllerWater3 = new SpriteAnimatorController(_spriteAnimatorConfigWater3);
-            _controller.Add(spriteAnimatorControllerWater);
-            _controller.Add(spriteAnimatorControllerWater2);
-            _controller.Add(spriteAnimatorControllerWater3);
 
-            var listSpriteAnimatorControllerWater = new List<SpriteAnimatorController>();
-            listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater);
-            listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater2);
-            listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater3);
-            listSpriteAnimatorControllerWater.Add(spriteAnimatorControllerWater);
+            #region WaterController
 
-            var waterManager = new WaterManager(playerInitialization.GetPlayerModel(), listSpriteAnimatorControllerWater, _listWaterViews);
-            _controller.Add(waterManager);
-            //  End Water
+            var waterFactory = new WaterFactory(_data.WaterData);
+            _controller.Add(waterFactory);
+            var waterInitialization = new WaterInitialization(waterFactory, _controller);
+            _controller.Add(waterInitialization);
+
+            var waterManager = new WaterManager(playerInitialization.GetPlayerModel(), 
+                waterInitialization.GetWaterModel().WaterStruct.SpriteAnimatorControllers, _listWaterViews);
+            _controller.Add(waterManager); 
+
+            #endregion
+
+
+            #region PlayerConfig
 
             var spritePlayerAnimatorController = new SpriteAnimatorController(playerInitialization.GetPlayerModel().PlayerSettings.SpriteAnimatorConfig);
             spritePlayerAnimatorController.StartAnimation(playerInitialization.GetPlayerModel().PlayerComponents.SpriteRenderer, AnimState.Idle, true, playerInitialization.GetPlayerModel().PlayerStruct.AnimationSpeed);
             _controller.Add(spritePlayerAnimatorController);
-
-            _controller.Add(new InputController(inputInitialization.GetInputProxy(), inputInitialization.GetInputMouse()));
 
             var contactPoolerPlayer = new ContactPooler(playerInitialization.GetPlayerModel().PlayerComponents.CircleCollider2D);
             _controller.Add(contactPoolerPlayer);
@@ -99,6 +100,11 @@ namespace JevLogin
                 playerInitialization.GetPlayerModel().PlayerStruct.WalkSpeed, contactPoolerPlayer);
             _controller.Add(playerMoveController);
 
+            #endregion
+
+
+            #region GunController
+
             var aimingMuzzle = new AimingMuzzle(_gunViews, playerInitialization.GetPlayerModel().PlayerComponents.TransformPlayer);
             _controller.Add(aimingMuzzle);
 
@@ -108,14 +114,21 @@ namespace JevLogin
             var bulletShooterController = new GunBulletShooterController(bulletInitialization, _gunViews[0].PivotBulletShoot);
             _controller.Add(bulletShooterController);
 
+            #endregion
+
+
+            #region CoinsController
+
             var coinsSpriteAnimatorController = new SpriteAnimatorController(_spriteAnimatorConfigCoins);
             _controller.Add(coinsSpriteAnimatorController);
 
             var coinsManager = new CoinsManager(playerInitialization.GetPlayerModel(), coinsSpriteAnimatorController, _coinsList);
             _controller.Add(coinsManager);
 
+            #endregion
 
-            var levelComplete = new LevelCompleteManager(playerInitialization.GetPlayerModel().PlayerComponents.PlayerView, 
+
+            var levelComplete = new LevelCompleteManager(playerInitialization.GetPlayerModel().PlayerComponents.PlayerView,
                 _listWaterViews.ToList<ICollisionDetect>(), _winZonesList.ToList<ICollisionDetect>());
         }
 

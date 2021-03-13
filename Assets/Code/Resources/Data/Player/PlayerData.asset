@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: PlayerData
   m_EditorClassIdentifier: 
   PlayerStruct:
-    SpawnPlayer: {fileID: 8144940930038477657, guid: 179f8cd05cbab6241950945ee5ac63e2, type: 3}
+    SpawnPlayer: {fileID: 2934576019781091710, guid: 179f8cd05cbab6241950945ee5ac63e2,
+      type: 3}
     AnimState: 0
     WalkSpeed: 250
     AnimationSpeed: 10

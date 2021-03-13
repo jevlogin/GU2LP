@@ -11,9 +11,28 @@ namespace JevLogin
     {
         [SerializeField] private string _enemyDataPath;
         [SerializeField] private string _playerDataPath;
+        [SerializeField] private string _waterDataPath;
 
         private EnemyData _enemyData;
         private PlayerData _playerData;
+        private WaterData _waterData;
+
+
+        public WaterData WaterData
+        {
+            get
+            {
+                if (_waterData == null)
+                {
+                    _waterData = Resources.Load<WaterData>(Path.Combine(ManagerPath.DATA, ManagerPath.WATER, ManagerName.WATER_DATA));
+                    if (_waterData == null)
+                    {
+                        _waterData = Resources.Load<WaterData>(Path.Combine(ManagerPath.WATER, _waterDataPath));
+                    }
+                }
+                return _waterData;
+            }
+        }
 
         public EnemyData EnemyData
         {

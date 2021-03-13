@@ -88,7 +88,10 @@
     <Compile Include="Assets\Code\Controller\Pool.cs" />
     <Compile Include="Assets\Code\Controller\SpriteAnimatorController.cs" />
     <Compile Include="Assets\Code\Controller\TerrainGenerator.cs" />
+    <Compile Include="Assets\Code\Controller\WaterFactory.cs" />
+    <Compile Include="Assets\Code\Controller\WaterInitialization.cs" />
     <Compile Include="Assets\Code\Controller\WaterManager.cs" />
+    <Compile Include="Assets\Code\Controller\WaterModel.cs" />
     <Compile Include="Assets\Code\Extentions\Extentions.cs" />
     <Compile Include="Assets\Code\Helper\AnimState.cs" />
     <Compile Include="Assets\Code\Helper\Animation.cs" />
@@ -99,6 +102,7 @@
     <Compile Include="Assets\Code\Helper\ManagerAxis.cs" />
     <Compile Include="Assets\Code\Helper\ManagerName.cs" />
     <Compile Include="Assets\Code\Helper\ManagerPath.cs" />
+    <Compile Include="Assets\Code\Helper\PlayerFactory.cs" />
     <Compile Include="Assets\Code\Helper\TilemapRender.cs" />
     <Compile Include="Assets\Code\Interface\ICleanup.cs" />
     <Compile Include="Assets\Code\Interface\ICollisionDetect.cs" />
@@ -113,7 +117,6 @@
     <Compile Include="Assets\Code\Model\Bullet.cs" />
     <Compile Include="Assets\Code\Model\CoinView.cs" />
     <Compile Include="Assets\Code\Model\PlayerComponents.cs" />
-    <Compile Include="Assets\Code\Model\PlayerFactory.cs" />
     <Compile Include="Assets\Code\Model\PlayerModel.cs" />
     <Compile Include="Assets\Code\Model\PlayerSettingsData.cs" />
     <Compile Include="Assets\Code\Model\PlayerStruct.cs" />
@@ -122,6 +125,9 @@
     <Compile Include="Assets\Code\ScriptableObjects\EnemyData.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\PlayerData.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\SpriteAnimatorConfig.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\WaterData.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\WaterSettingsData.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\WaterStruct.cs" />
     <Compile Include="Assets\Code\View\BulletView.cs" />
     <Compile Include="Assets\Code\View\GroundTile.cs" />
     <Compile Include="Assets\Code\View\GunView.cs" />
