@@ -6,7 +6,7 @@ namespace JevLogin
 {
     public sealed class TilemapRender : MonoBehaviour
     {
-        public void Render(ITilemap tilemap)
+        public void Render(ITilemap tilemap, VariantCollider _variantCollider)
         {
             Clear();
 
@@ -20,7 +20,7 @@ namespace JevLogin
                     {
                         GameObject cellGo = CreateEmpty(new Vector2Int(x, y));
 
-                        cell.Refresh(new Vector2Int(x, y), tilemap, cellGo);
+                        cell.Refresh(new Vector2Int(x, y), tilemap, cellGo, _variantCollider);
                     }
                 }
             }

@@ -88,6 +88,7 @@
     <Compile Include="Assets\Code\Controller\Pool.cs" />
     <Compile Include="Assets\Code\Controller\SpriteAnimatorController.cs" />
     <Compile Include="Assets\Code\Controller\TerrainGenerator.cs" />
+    <Compile Include="Assets\Code\Controller\VariantCollider.cs" />
     <Compile Include="Assets\Code\Controller\WaterFactory.cs" />
     <Compile Include="Assets\Code\Controller\WaterInitialization.cs" />
     <Compile Include="Assets\Code\Controller\WaterManager.cs" />
