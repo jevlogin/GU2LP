@@ -82,7 +82,10 @@ namespace JevLogin
 
         private ITilemap Cenerate()
         {
-            Clear();
+            if (_tilemapRender != null)
+            {
+                Clear();
+            }
 
             int groundHeight = _height;
 
