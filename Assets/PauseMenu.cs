@@ -35,11 +35,10 @@ namespace JevLogin
 
         private void Update()
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetButtonDown(ManagerAxis.CANCEL))
             {
                 _isActive = !_isActive;
                 OnApplicationPause(_isActive);
-
             }
         }
 
@@ -52,18 +51,21 @@ namespace JevLogin
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0;
-                _isActive = true;
+                _isActive = true;   //TODO подсомнением
+
                 if (_audioSourceInGameProcess.isPlaying)
                 {
                     _audioSourceInGameProcess.Pause();
+                    Debug.Log($"Должна поставиться пауза");
                 }
+
                 CurrentPauseMenu.SetActive(_isActive);
             }
             else
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-                _isActive = false;
+                _isActive = false;   //TODO подсомнением
                 Time.timeScale = 1;
                 if (!_audioSourceInGameProcess.isPlaying)
                 {
