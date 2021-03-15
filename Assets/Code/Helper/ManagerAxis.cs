@@ -7,5 +7,6 @@
         public const string JUMP = "Jump";
         public const string FIRE1 = "Fire1";
         public const string FIRE2 = "Fire2";
+        public const string CANCEL = "Cancel";
     }
 }

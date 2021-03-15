@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JevLogin
 {
-    internal class WaterManager : IEmptyInitialization
+    internal class WaterManager : IEmptyInitialization, ICleanup
     {
         private PlayerModel _playerModel;
         private float _animationSpeed;
@@ -15,7 +15,7 @@ namespace JevLogin
         public WaterManager(PlayerModel playerModel, List<SpriteAnimatorController> listSpriteAnimatorControllerWater, List<WaterView> listWaterViews)
         {
             _playerModel = playerModel;
-            _animationSpeed = playerModel.PlayerStruct.AnimationSpeed;
+            _animationSpeed = _playerModel.PlayerStruct.AnimationSpeed;
             _listSpriteAnimatorControllerWater = listSpriteAnimatorControllerWater;
             _listWaterViews = listWaterViews;
 
@@ -31,6 +31,12 @@ namespace JevLogin
                     }
                 }
             }
+        }
+
+        public void Cleanup()
+        {
+            _listSpriteAnimatorControllerWater.Clear();
+            _listWaterViews.Clear();
         }
     }
 }

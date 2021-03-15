@@ -4,8 +4,8 @@
     {
         #region Fields
 
-        private PlayerFactory _playerFactory;
-        private PlayerModel _playerModel;
+        private readonly PlayerFactory _playerFactory;
+        private readonly PlayerModel _playerModel;
 
         #endregion
 

@@ -12,7 +12,7 @@ namespace JevLogin
         private ContactPoint2D[] _contactPoint2Ds = new ContactPoint2D[10];
         private readonly Collider2D _collider2D;
 
-        private const float _collisionTresh = 0.6f;
+        private const float _collisionTresh = 0.75f;
         private int _contactCount;
 
         #endregion
