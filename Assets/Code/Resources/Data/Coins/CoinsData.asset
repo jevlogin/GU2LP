@@ -12,4 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe40f4a7b7f02bb449e67fdd826d6336, type: 3}
   m_Name: CoinsData
   m_EditorClassIdentifier: 
-  CoinPickingSounds: []
+  CoinPickingSounds:
+  - {fileID: 8300000, guid: d4797b570613e5b48a3354fd273a154c, type: 3}
+  - {fileID: 8300000, guid: 1130fc4b778c8234bae539f50d1c7d6d, type: 3}
+  CoinsPrefab: {fileID: 6156006265132513616, guid: 8cfd51a1ee18fbf488fd41d4cbc24904,
+    type: 3}

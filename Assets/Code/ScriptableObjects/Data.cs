@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
@@ -9,6 +7,8 @@ namespace JevLogin
     [CreateAssetMenu(fileName = "Data", menuName = "Data/Data", order = 51)]
     public sealed class Data : ScriptableObject
     {
+        #region Fields
+
         [SerializeField] private string _enemyDataPath;
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _waterDataPath;
@@ -19,6 +19,11 @@ namespace JevLogin
         private WaterData _waterData;
         private CoinsData _coinsData;
 
+        #endregion
+
+
+        #region Properties
+
         public CoinsData CoinsData
         {
             get
@@ -26,6 +31,10 @@ namespace JevLogin
                 if (_coinsData == null)
                 {
                     _coinsData = Resources.Load<CoinsData>(Path.Combine(ManagerPath.DATA, ManagerPath.COINS, ManagerName.COINS_DATA));
+                    if (_coinsData == null)
+                    {
+                        _coinsData = Resources.Load<CoinsData>(Path.Combine(ManagerPath.DATA, _coinsDataPath));
+                    }
                 }
                 return _coinsData;
             }
@@ -40,7 +49,7 @@ namespace JevLogin
                     _waterData = Resources.Load<WaterData>(Path.Combine(ManagerPath.DATA, ManagerPath.WATER, ManagerName.WATER_DATA));
                     if (_waterData == null)
                     {
-                        _waterData = Resources.Load<WaterData>(Path.Combine(ManagerPath.WATER, _waterDataPath));
+                        _waterData = Resources.Load<WaterData>(Path.Combine(ManagerPath.DATA, _waterDataPath));
                     }
                 }
                 return _waterData;
@@ -79,6 +88,6 @@ namespace JevLogin
             }
         }
 
-
+        #endregion
     }
 }
