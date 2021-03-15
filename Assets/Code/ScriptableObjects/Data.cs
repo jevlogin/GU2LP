@@ -12,11 +12,24 @@ namespace JevLogin
         [SerializeField] private string _enemyDataPath;
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _waterDataPath;
+        [SerializeField] private string _coinsDataPath;
 
         private EnemyData _enemyData;
         private PlayerData _playerData;
         private WaterData _waterData;
+        private CoinsData _coinsData;
 
+        public CoinsData CoinsData
+        {
+            get
+            {
+                if (_coinsData == null)
+                {
+                    _coinsData = Resources.Load<CoinsData>(Path.Combine(ManagerPath.DATA, ManagerPath.COINS, ManagerName.COINS_DATA));
+                }
+                return _coinsData;
+            }
+        }
 
         public WaterData WaterData
         {
