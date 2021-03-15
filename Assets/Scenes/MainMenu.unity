@@ -313,6 +313,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1502340055564038376, guid: b97138864e8eb6341b039d026eae4fa8,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef9db0ac519d0e641947667e04606125, type: 3}
     - target: {fileID: 1502340055608425166, guid: b97138864e8eb6341b039d026eae4fa8,
         type: 3}
       propertyPath: m_AnchoredPosition.y
