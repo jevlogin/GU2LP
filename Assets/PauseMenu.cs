@@ -51,12 +51,11 @@ namespace JevLogin
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0;
-                _isActive = true;   //TODO подсомнением
+                _isActive = true;
 
                 if (_audioSourceInGameProcess.isPlaying)
                 {
                     _audioSourceInGameProcess.Pause();
-                    Debug.Log($"Должна поставиться пауза");
                 }
 
                 CurrentPauseMenu.SetActive(_isActive);
@@ -65,7 +64,7 @@ namespace JevLogin
             {
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
-                _isActive = false;   //TODO подсомнением
+                _isActive = false;
                 Time.timeScale = 1;
                 if (!_audioSourceInGameProcess.isPlaying)
                 {

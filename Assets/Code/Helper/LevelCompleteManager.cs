@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 namespace JevLogin
 {
@@ -34,7 +34,7 @@ namespace JevLogin
                 }
                 if (_winZones.Contains(levelObjectView))
                 {
-                    Debug.Log("You Win!");
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                 }
             }
         }

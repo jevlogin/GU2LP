@@ -72,7 +72,7 @@ namespace JevLogin
             _dropdownQualitySettings.value = QualitySettings.GetQualityLevel();
 
             //TODO подсомнением
-            /*
+
             var tempResolution = Screen.currentResolution.width + "x" + Screen.currentResolution.height;
             for (int index = 0; index < _resolutionsList.Count; index++)
             {
@@ -81,7 +81,7 @@ namespace JevLogin
                     _dropdownScreenResolution.value = index;
                 }
             }
-            */
+
         }
 
         public void PlayGame() => SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
