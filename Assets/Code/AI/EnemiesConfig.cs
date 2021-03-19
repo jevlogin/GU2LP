@@ -37,8 +37,10 @@ namespace JevLogin
         {
             _simplePatrolAI = new SimplePatrolAI(_simplePatrolAIView, new SimplePatrolModel(_simplePatrolAIConfig));
 
-            //_stalkerAI = new StalkerAI(_stalkerAIView, new StalkerAIModel(_stalkerAIConfig), _stalkerAISeeker, _stalkerAITarget);
-            //InvokeRepeating(nameof(RecalculateAIPath), 0.0f, 1.0f);
+            _stalkerAITarget = GameObject.Find("Player").transform;
+
+            _stalkerAI = new StalkerAI(_stalkerAIView, new StalkerAIModel(_stalkerAIConfig), _stalkerAISeeker, _stalkerAITarget);
+            InvokeRepeating(nameof(RecalculateAIPath), 0.0f, 1.0f);
 
             //_protectorAI = new ProtectorAI(_protectorAIView, new PatrolAIModel(_protectorWaypoints), _protectorAIDestinationSetter, );
             //_protectorAI.Init();

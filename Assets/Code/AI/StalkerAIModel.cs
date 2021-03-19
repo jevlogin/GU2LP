@@ -19,6 +19,7 @@ namespace JevLogin
         public StalkerAIModel(AIConfig stalkerAIConfig)
         {
             _config = stalkerAIConfig;
+            _config._minSqrDistanceToTarget = _config.MinDistanceToTarget * _config.MinDistanceToTarget;
         }
 
         #endregion
@@ -46,10 +47,12 @@ namespace JevLogin
             var direction = ((Vector2)_path.vectorPath[_currentPointIndex] - fromPosition).normalized;
             var result = _config.Speed * direction;
             var sqrDistance = Vector2.SqrMagnitude((Vector2)_path.vectorPath[_currentPointIndex] - fromPosition);
-            if (sqrDistance <= _config.MinDistanceToTarget)
+
+            if (sqrDistance <= _config._minSqrDistanceToTarget)
             {
                 _currentPointIndex++;
             }
+
             return result;
         }
 

@@ -33095,13 +33095,13 @@ MonoBehaviour:
     - {fileID: 1232901204}
   _simplePatrolAIView: {fileID: 1460565870}
   _stalkerAIConfig:
-    Speed: 22
+    Speed: 50
     MinDistanceToTarget: 1
     Waypoints:
     - {fileID: 1303248447}
   _stalkerAIView: {fileID: 1460565870}
   _stalkerAISeeker: {fileID: 1460565873}
-  _stalkerAITarget: {fileID: 6747129072756788340, guid: 94d1e486bf5e5144d94e514a1c33a840,
+  _stalkerAITarget: {fileID: 7808728645094668016, guid: ea057f2ddda45724c8fc08ccd1f5746d,
     type: 3}
   _protectorAIView: {fileID: 0}
   _protectorAIDestinationSetter: {fileID: 0}
@@ -102628,8 +102628,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.83732045}
-  m_Size: {x: 0.79, y: 1.7}
+  m_Offset: {x: 0.015369803, y: 0.77826047}
+  m_Size: {x: 0.5919239, y: 1.5818801}
   m_Direction: 0
 --- !u!114 &1460565870
 MonoBehaviour:
