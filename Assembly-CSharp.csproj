@@ -64,6 +64,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\AI\AIConfig.cs" />
+    <Compile Include="Assets\Code\AI\EnemiesConfig.cs" />
+    <Compile Include="Assets\Code\AI\IProtector.cs" />
+    <Compile Include="Assets\Code\AI\LevelObjectTrigger.cs" />
+    <Compile Include="Assets\Code\AI\ProtectedZone.cs" />
+    <Compile Include="Assets\Code\AI\ProtectorAI.cs" />
+    <Compile Include="Assets\Code\AI\SimplePatrolAI.cs" />
+    <Compile Include="Assets\Code\AI\SimplePatrolModel.cs" />
+    <Compile Include="Assets\Code\AI\StalkerAI.cs" />
+    <Compile Include="Assets\Code\AI\StalkerAIModel.cs" />
     <Compile Include="Assets\Code\Controller\AimingMuzzle.cs" />
     <Compile Include="Assets\Code\Controller\AnimatorController.cs" />
     <Compile Include="Assets\Code\Controller\BulletInitialization.cs" />
