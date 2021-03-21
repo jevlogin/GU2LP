@@ -2,18 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 namespace JevLogin
 {
-    internal class ProtectedZone
+    public sealed class ProtectedZone
     {
+        #region Fields
+
         private List<IProtector> _protectors;
         private LevelObjectTrigger _view;
+
+        #endregion
+
+
+        #region ClassLifeCycles
 
         public ProtectedZone(LevelObjectTrigger view, List<IProtector> protectors)
         {
             _view = view != null ? view : throw new System.ArgumentNullException(nameof(view));
             _protectors = protectors != null ? protectors : throw new System.ArgumentNullException(nameof(protectors));
         }
+
+        #endregion
 
         public void Init()
         {

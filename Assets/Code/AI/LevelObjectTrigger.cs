@@ -8,8 +8,8 @@ namespace JevLogin
     {
         #region Events
 
-        public event EventHandler<GameObject> TriggerEnter;
-        public event EventHandler<GameObject> TriggerExit;
+        public event EventHandler<GameObject> TriggerEnter = delegate (object sender, GameObject eventArgs) { };
+        public event EventHandler<GameObject> TriggerExit = delegate (object sender, GameObject eventArgs) { };
 
         #endregion
 
@@ -18,12 +18,12 @@ namespace JevLogin
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            TriggerEnter?.Invoke(this, collision.gameObject);
+            TriggerEnter.Invoke(this, collision.gameObject);
         }
 
         private void OnTriggerExit2D(Collider2D collision)
         {
-            TriggerExit?.Invoke(this, collision.gameObject);
+            TriggerExit.Invoke(this, collision.gameObject);
         }
 
         #endregion

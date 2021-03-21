@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - Ground
-  - 
-  - 
+  - LevelObjectTrigger
+  - Player
   - 
   - 
   - 

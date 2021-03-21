@@ -21,7 +21,7 @@ namespace JevLogin
         [Header("Protector AI")]
         [SerializeField] private LevelObjectView _protectorAIView;
         [SerializeField] private AIDestinationSetter _protectorAIDestinationSetter;
-        //[SerializeField] private AIPatrolPath _protectorAIPatrolPath;
+        [SerializeField] private AIPatrolPath _protectorAIPatrolPath;
         [SerializeField] private LevelObjectTrigger _protectedZoneTrigger;
         [SerializeField] private Transform[] _protectorWaypoints;
 
@@ -40,31 +40,32 @@ namespace JevLogin
             _stalkerAITarget = GameObject.Find("Player").transform;
 
             _stalkerAI = new StalkerAI(_stalkerAIView, new StalkerAIModel(_stalkerAIConfig), _stalkerAISeeker, _stalkerAITarget);
-            InvokeRepeating(nameof(RecalculateAIPath), 0.0f, 1.0f);
+            //InvokeRepeating(nameof(RecalculateAIPath), 0.0f, 1.0f);
 
-            //_protectorAI = new ProtectorAI(_protectorAIView, new PatrolAIModel(_protectorWaypoints), _protectorAIDestinationSetter, );
-            //_protectorAI.Init();
+            _protectorAI = new ProtectorAI(_protectorAIView, new PatrolAIModel(_protectorWaypoints), 
+                _protectorAIDestinationSetter, _protectorAIPatrolPath);
+            _protectorAI.Init();
 
-            //_protectedZone = new ProtectedZone(_protectedZoneTrigger, new List<IProtector> { _protectorAI });
-            //_protectedZone.Init();
+            _protectedZone = new ProtectedZone(_protectedZoneTrigger, new List<IProtector> { _protectorAI });
+            _protectedZone.Init();
         }
 
         private void FixedUpdate()
         {
-            if (_simplePatrolAI != null)
-            {
-                _simplePatrolAI.FixedUpdate();
-            }
-            if (_stalkerAI != null)
-            {
-                _stalkerAI.FixedUpdate();
-            }
+            //if (_simplePatrolAI != null)
+            //{
+            //    _simplePatrolAI.FixedUpdate();
+            //}
+            //if (_stalkerAI != null)
+            //{
+            //    _stalkerAI.FixedUpdate();
+            //}
         }
 
         private void OnDestroy()
         {
-            //_protectorAI.Deinit();
-            //_protectedZone.Deinit();
+            _protectorAI.Deinit();
+            _protectedZone.Deinit();
         }
 
         private void RecalculateAIPath()

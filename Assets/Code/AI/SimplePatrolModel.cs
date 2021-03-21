@@ -18,6 +18,7 @@ namespace JevLogin
 
         public SimplePatrolModel(AIConfig aIConfig)
         {
+            _currentPointIndex = 0;
             _config = aIConfig;
             _config._minSqrDistanceToTarget = _config.MinDistanceToTarget * _config.MinDistanceToTarget;
             _target = GetNextWaypoint();

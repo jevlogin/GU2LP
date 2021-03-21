@@ -65,9 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\AI\AIConfig.cs" />
+    <Compile Include="Assets\Code\AI\AIPatrolPath.cs" />
     <Compile Include="Assets\Code\AI\EnemiesConfig.cs" />
     <Compile Include="Assets\Code\AI\IProtector.cs" />
     <Compile Include="Assets\Code\AI\LevelObjectTrigger.cs" />
+    <Compile Include="Assets\Code\AI\PatrolAIModel.cs" />
     <Compile Include="Assets\Code\AI\ProtectedZone.cs" />
     <Compile Include="Assets\Code\AI\ProtectorAI.cs" />
     <Compile Include="Assets\Code\AI\SimplePatrolAI.cs" />
