@@ -4,6 +4,7 @@ using UnityEngine;
 using Pathfinding;
 using System;
 
+
 namespace JevLogin
 {
     public sealed class EnemyAI : MonoBehaviour
