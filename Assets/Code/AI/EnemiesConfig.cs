@@ -40,7 +40,7 @@ namespace JevLogin
             _stalkerAITarget = GameObject.Find("Player").transform;
 
             _stalkerAI = new StalkerAI(_stalkerAIView, new StalkerAIModel(_stalkerAIConfig), _stalkerAISeeker, _stalkerAITarget);
-            //InvokeRepeating(nameof(RecalculateAIPath), 0.0f, 1.0f);
+            InvokeRepeating(nameof(RecalculateAIPath), 0.0f, 1.0f);
 
             _protectorAI = new ProtectorAI(_protectorAIView, new PatrolAIModel(_protectorWaypoints), 
                 _protectorAIDestinationSetter, _protectorAIPatrolPath);
@@ -56,10 +56,10 @@ namespace JevLogin
             //{
             //    _simplePatrolAI.FixedUpdate();
             //}
-            //if (_stalkerAI != null)
-            //{
-            //    _stalkerAI.FixedUpdate();
-            //}
+            if (_stalkerAI != null)
+            {
+                _stalkerAI.FixedUpdate();
+            }
         }
 
         private void OnDestroy()
