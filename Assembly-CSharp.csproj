@@ -64,6 +64,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\AI\AIConfig.cs" />
+    <Compile Include="Assets\Code\AI\AIPatrolPath.cs" />
+    <Compile Include="Assets\Code\AI\EnemiesConfig.cs" />
+    <Compile Include="Assets\Code\AI\IProtector.cs" />
+    <Compile Include="Assets\Code\AI\LevelObjectTrigger.cs" />
+    <Compile Include="Assets\Code\AI\PatrolAIModel.cs" />
+    <Compile Include="Assets\Code\AI\ProtectedZone.cs" />
+    <Compile Include="Assets\Code\AI\ProtectorAI.cs" />
+    <Compile Include="Assets\Code\AI\SimplePatrolAI.cs" />
+    <Compile Include="Assets\Code\AI\SimplePatrolModel.cs" />
+    <Compile Include="Assets\Code\AI\StalkerAI.cs" />
+    <Compile Include="Assets\Code\AI\StalkerAIModel.cs" />
     <Compile Include="Assets\Code\Controller\AimingMuzzle.cs" />
     <Compile Include="Assets\Code\Controller\AnimatorController.cs" />
     <Compile Include="Assets\Code\Controller\BulletInitialization.cs" />
@@ -142,6 +154,7 @@
     <Compile Include="Assets\Code\View\PlayerView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
     <Compile Include="Assets\Code\View\WinView.cs" />
+    <Compile Include="Assets\EnemyAI.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
@@ -393,6 +406,9 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>F:/Program Files/Unity Hub/Editor/2019.4.21f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Pathfinding.Ionic.Zip.Reduced">
+      <HintPath>F:/UnityProjects/GU2LP/Assets/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>F:/Program Files/Unity Hub/Editor/2019.4.21f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -821,7 +837,20 @@
       <HintPath>F:/UnityProjects/GU2LP/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
-  <ItemGroup></ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="AstarPathfindingProject.csproj">
+      <Project>{F7C69CE3-E3E2-CA37-2266-4E8D0027AA87}</Project>
+      <Name>AstarPathfindingProject</Name>
+    </ProjectReference>
+    <ProjectReference Include="PackageToolsEditor.csproj">
+      <Project>{A611BE66-981F-921C-9875-E2B449EAA315}</Project>
+      <Name>PackageToolsEditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="AstarPathfindingProjectEditor.csproj">
+      <Project>{E25602D7-6398-6BC3-DA64-F793EC9C0EEC}</Project>
+      <Name>AstarPathfindingProjectEditor</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

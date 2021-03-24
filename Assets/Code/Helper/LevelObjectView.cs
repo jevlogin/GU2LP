@@ -9,7 +9,7 @@ namespace JevLogin
         public SpriteRenderer SpriteRenderer;
         public Collider2D Collider2D;
         public Transform Transform;
-        public Rigidbody2D Rigidbody;
+        public Rigidbody2D Rigidbody2D;
 
         public Action<LevelObjectView> OnLevelObjectContact = delegate (LevelObjectView levelObjectView) { };
 

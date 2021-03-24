@@ -57,7 +57,9 @@ namespace JevLogin
                 .AddCircleCollider2D()
                 .AddRigidbody2D()
                 .AddComponent<PlayerView>();
-            
+            player.tag = "Player";
+            player.gameObject.layer = LayerMask.NameToLayer("Player");
+
             player.transform.position = _playerData.PlayerStruct.SpawnPlayer.position;
 
             return player;
