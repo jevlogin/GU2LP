@@ -67,6 +67,7 @@
     <Compile Include="Assets\Code\AI\AIConfig.cs" />
     <Compile Include="Assets\Code\AI\AIPatrolPath.cs" />
     <Compile Include="Assets\Code\AI\EnemiesConfig.cs" />
+    <Compile Include="Assets\Code\AI\EnemyAI.cs" />
     <Compile Include="Assets\Code\AI\IProtector.cs" />
     <Compile Include="Assets\Code\AI\LevelObjectTrigger.cs" />
     <Compile Include="Assets\Code\AI\PatrolAIModel.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Assets\Code\Extentions\Extentions.cs" />
     <Compile Include="Assets\Code\GUI\MainMenu.cs" />
     <Compile Include="Assets\Code\GenerateLevel\ControlNode.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\GenerateLevel.cs" />
     <Compile Include="Assets\Code\GenerateLevel\GenerateLevelView.cs" />
     <Compile Include="Assets\Code\GenerateLevel\GeneratorLevelController.cs" />
     <Compile Include="Assets\Code\GenerateLevel\MarchingSquaresGeneratorLevel.cs" />
@@ -161,8 +163,6 @@
     <Compile Include="Assets\Code\View\PlayerView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
     <Compile Include="Assets\Code\View\WinView.cs" />
-    <Compile Include="Assets\EnemyAI.cs" />
-    <Compile Include="Assets\GenerateLevel.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
