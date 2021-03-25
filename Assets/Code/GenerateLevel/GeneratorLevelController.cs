@@ -44,10 +44,10 @@ namespace JevLogin
                 SmoothMap();
             }
 
-            DrawTilesOnMap();
+            //DrawTilesOnMap();
 
-            //_marchingSquaresGeneratorLevel.GenerateGrid(_map, 1);
-            //_marchingSquaresGeneratorLevel.DrawTilesOnMap(_tileMapGround, _tileGround);
+            _marchingSquaresGeneratorLevel.GenerateGrid(_map, 1);
+            _marchingSquaresGeneratorLevel.DrawTilesOnMap(_tileMapGround, _tileGround);
         }
 
         private void DrawTilesOnMap()

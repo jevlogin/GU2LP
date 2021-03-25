@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEditor.Tilemaps;
+﻿using UnityEngine;
 
 
 namespace JevLogin
@@ -11,7 +8,6 @@ namespace JevLogin
         [SerializeField] private GenerateLevelView _generateLevelView;
 
         private GeneratorLevelController _generatorLevelController;
-
 
         private void Start()
         {

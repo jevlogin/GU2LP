@@ -375,8 +375,8 @@ MonoBehaviour:
   _tileMapGround: {fileID: 1626838410}
   _tileGround: {fileID: 11400000, guid: 54e79b55096f54e4c9f3e5ee3686ae94, type: 2}
   _widthMap: 200
-  _heightMap: 50
-  factorSmooth: 2
+  _heightMap: 20
+  factorSmooth: 1
   _randomFillPercent: 20
 --- !u!483693784 &1626838409
 TilemapRenderer:
