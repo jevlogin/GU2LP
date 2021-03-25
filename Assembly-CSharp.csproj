@@ -106,6 +106,13 @@
     <Compile Include="Assets\Code\Controller\WaterManager.cs" />
     <Compile Include="Assets\Code\Extentions\Extentions.cs" />
     <Compile Include="Assets\Code\GUI\MainMenu.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\ControlNode.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\GenerateLevelView.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\GeneratorLevelController.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\MarchingSquaresGeneratorLevel.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\Node.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\Square.cs" />
+    <Compile Include="Assets\Code\GenerateLevel\SquareGrid.cs" />
     <Compile Include="Assets\Code\Helper\AnimState.cs" />
     <Compile Include="Assets\Code\Helper\Animation.cs" />
     <Compile Include="Assets\Code\Helper\CoinsManager.cs" />
@@ -155,6 +162,7 @@
     <Compile Include="Assets\Code\View\WaterView.cs" />
     <Compile Include="Assets\Code\View\WinView.cs" />
     <Compile Include="Assets\EnemyAI.cs" />
+    <Compile Include="Assets\GenerateLevel.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

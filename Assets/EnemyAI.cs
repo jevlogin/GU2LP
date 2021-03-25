@@ -54,7 +54,6 @@ namespace JevLogin
         private bool TargetInDistance()
         {
             return (Target.position - transform.position).sqrMagnitude < _sqrActiveDistance;
-            //return Vector2.Distance(transform.position, Target.position) < ActiavateDistance;
         }
 
         private void PathFollow()
