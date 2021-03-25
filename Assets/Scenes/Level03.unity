@@ -313,7 +313,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676578715}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -374,9 +374,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _tileMapGround: {fileID: 1626838410}
   _tileGround: {fileID: 11400000, guid: 54e79b55096f54e4c9f3e5ee3686ae94, type: 2}
-  _widthMap: 200
-  _heightMap: 20
-  factorSmooth: 1
+  _widthMap: 100
+  _heightMap: 25
+  factorSmooth: 2
   _randomFillPercent: 20
 --- !u!483693784 &1626838409
 TilemapRenderer:
