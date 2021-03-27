@@ -99,6 +99,10 @@
     <Compile Include="Assets\Code\Controller\PlayerInitialization.cs" />
     <Compile Include="Assets\Code\Controller\PlayerMoveController.cs" />
     <Compile Include="Assets\Code\Controller\Pool.cs" />
+    <Compile Include="Assets\Code\Controller\Quest\IQuestStory.cs" />
+    <Compile Include="Assets\Code\Controller\Quest\QuestConfigurator.cs" />
+    <Compile Include="Assets\Code\Controller\Quest\QuestStory.cs" />
+    <Compile Include="Assets\Code\Controller\Quest\ResettableQuestStory.cs" />
     <Compile Include="Assets\Code\Controller\SpriteAnimatorController.cs" />
     <Compile Include="Assets\Code\Controller\TerrainGenerator.cs" />
     <Compile Include="Assets\Code\Controller\VariantCollider.cs" />
@@ -136,6 +140,8 @@
     <Compile Include="Assets\Code\Interface\ILateExecute.cs" />
     <Compile Include="Assets\Code\Interface\IUserInputMouseBool.cs" />
     <Compile Include="Assets\Code\Interface\IUserInputProxy.cs" />
+    <Compile Include="Assets\Code\Interface\Quest\IQuest.cs" />
+    <Compile Include="Assets\Code\Interface\Quest\IQuestModel.cs" />
     <Compile Include="Assets\Code\Model\Bullet.cs" />
     <Compile Include="Assets\Code\Model\Coin\CoinComponents.cs" />
     <Compile Include="Assets\Code\Model\Coin\CoinModel.cs" />
@@ -145,7 +151,10 @@
     <Compile Include="Assets\Code\Model\Player\PlayerModel.cs" />
     <Compile Include="Assets\Code\Model\Player\PlayerSettingsData.cs" />
     <Compile Include="Assets\Code\Model\Player\PlayerStruct.cs" />
+    <Compile Include="Assets\Code\Model\Quest.cs" />
+    <Compile Include="Assets\Code\Model\QuestType.cs" />
     <Compile Include="Assets\Code\Model\SpriteSequence.cs" />
+    <Compile Include="Assets\Code\Model\SwitchQuestModel.cs" />
     <Compile Include="Assets\Code\Model\Water\WaterModel.cs" />
     <Compile Include="Assets\Code\Model\Water\WaterSettingsData.cs" />
     <Compile Include="Assets\Code\Model\Water\WaterStruct.cs" />
@@ -153,6 +162,10 @@
     <Compile Include="Assets\Code\ScriptableObjects\Data.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\Enemy\EnemyData.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\Player\PlayerData.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\Quest\QuestConfig.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\Quest\QuestItemConfig.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\Quest\QuestStoryConfig.cs" />
+    <Compile Include="Assets\Code\ScriptableObjects\Quest\QuestStoryType.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\SpriteAnimatorConfig.cs" />
     <Compile Include="Assets\Code\ScriptableObjects\Water\WaterData.cs" />
     <Compile Include="Assets\Code\View\BulletView.cs" />
@@ -161,6 +174,7 @@
     <Compile Include="Assets\Code\View\GroundTile.cs" />
     <Compile Include="Assets\Code\View\GunView.cs" />
     <Compile Include="Assets\Code\View\PlayerView.cs" />
+    <Compile Include="Assets\Code\View\QuestObjectView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
     <Compile Include="Assets\Code\View\WinView.cs" />
     <Compile Include="Assets\PauseMenu.cs" />

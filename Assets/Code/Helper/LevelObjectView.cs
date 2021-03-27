@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JevLogin
 {
-    public sealed class LevelObjectView : MonoBehaviour
+    public class LevelObjectView : MonoBehaviour
     {
         public SpriteRenderer SpriteRenderer;
         public Collider2D Collider2D;
@@ -16,7 +16,10 @@ namespace JevLogin
         private void OnTriggerEnter2D(Collider2D collision)
         {
             var levelObject = collision.GetComponent<LevelObjectView>();
-            OnLevelObjectContact.Invoke(levelObject);
+            if (levelObject != null)
+            {
+                OnLevelObjectContact.Invoke(levelObject);
+            }
         }
     }
 }
