@@ -80657,12 +80657,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4a6270e5fde48148a5eeb29290e70be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _singleQuestView: {fileID: 1403864201}
+  _singleQuestView: {fileID: 1880770097}
   _questStoryConfigs:
   - {fileID: 11400000, guid: fd3673bf338183644a9806b295e6e09a, type: 2}
   _questObjectViews:
   - {fileID: 1403864201}
   - {fileID: 881035168}
+  - {fileID: 256769357}
+  - {fileID: 254125753}
 --- !u!4 &1130824401
 Transform:
   m_ObjectHideFlags: 0
