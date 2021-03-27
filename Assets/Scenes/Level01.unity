@@ -16660,7 +16660,7 @@ MonoBehaviour:
   Transform: {fileID: 254125752}
   Rigidbody2D: {fileID: 0}
   _id: 5
-  _completedColor: {r: 1, g: 0.25206682, b: 0, a: 0}
+  _completedColor: {r: 0, g: 1, b: 0.96124196, a: 1}
 --- !u!61 &254125754
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16955,7 +16955,7 @@ MonoBehaviour:
   Transform: {fileID: 256769356}
   Rigidbody2D: {fileID: 0}
   _id: 7
-  _completedColor: {r: 0, g: 1, b: 0.80870605, a: 0}
+  _completedColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!61 &256769358
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -60767,7 +60767,7 @@ MonoBehaviour:
   Transform: {fileID: 881035167}
   Rigidbody2D: {fileID: 0}
   _id: 2
-  _completedColor: {r: 0, g: 0.68260765, b: 1, a: 0}
+  _completedColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!61 &881035169
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100216,7 +100216,7 @@ MonoBehaviour:
   Transform: {fileID: 1403864200}
   Rigidbody2D: {fileID: 0}
   _id: 3
-  _completedColor: {r: 0.31055474, g: 1, b: 0, a: 0}
+  _completedColor: {r: 0.31055474, g: 1, b: 0, a: 1}
 --- !u!61 &1403864202
 BoxCollider2D:
   m_ObjectHideFlags: 0
