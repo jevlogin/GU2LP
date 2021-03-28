@@ -37,9 +37,9 @@ namespace JevLogin
 
         #region Methods
 
-        private void OnContact(LevelObjectView arg)
+        private void OnContact(LevelObjectView view)
         {
-            var completed = _model.TryComplete(arg.gameObject);
+            var completed = _model.TryComplete(view.gameObject);
             if (completed)
             {
                 Complete();
@@ -68,12 +68,6 @@ namespace JevLogin
 
         #region IQuest
 
-        public void Dispose()
-        {
-            _view.OnLevelObjectContact -= OnContact;
-        }
-
-
         public void Reset()
         {
             if (_active)
@@ -83,6 +77,11 @@ namespace JevLogin
             _active = true;
             _view.OnLevelObjectContact += OnContact;
             _view.ProcessActivate();
+        }
+
+        public void Dispose()
+        {
+            _view.OnLevelObjectContact -= OnContact;
         }
 
         #endregion
