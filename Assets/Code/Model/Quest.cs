@@ -53,6 +53,7 @@ namespace JevLogin
                 return;
             }
             _active = false;
+            IsCompleted = true;
             _view.OnLevelObjectContact -= OnContact;
             _view.ProcessComplete();
             OnCompleted();
@@ -75,6 +76,7 @@ namespace JevLogin
                 return;
             }
             _active = true;
+            IsCompleted = false;
             _view.OnLevelObjectContact += OnContact;
             _view.ProcessActivate();
         }

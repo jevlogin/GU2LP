@@ -15,7 +15,7 @@ namespace JevLogin
         #endregion
 
 
-        #region IQuestStory
+        #region Properties
 
         public bool IsDone => _questsCollection.All(value => value.IsCompleted);
 

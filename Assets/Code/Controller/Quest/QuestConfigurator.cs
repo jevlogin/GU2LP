@@ -55,11 +55,15 @@ namespace JevLogin
 
         private void OnDestroy()
         {
-            foreach (var questStory in _questStories)
+            if (_questStories != null)
             {
-                questStory.Dispose();
+                foreach (var questStory in _questStories)
+                {
+                    questStory.Dispose();
+                }
+                _questStories.Clear();
             }
-            _questStories.Clear();
+            _singleQuest.Dispose();
         }
 
         #endregion
