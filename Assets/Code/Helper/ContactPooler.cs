@@ -12,8 +12,7 @@ namespace JevLogin
         private ContactPoint2D[] _contactPoint2Ds = new ContactPoint2D[10];
         private readonly Collider2D _collider2D;
 
-        private const float _collisionTresh = 0.75f;
-        private const float _collisionNormalTresh = 1.5f;
+        private const float _collisionTresh = 0.25f;
         private int _contactCount;
         internal Vector2 GroundVelocity;
 

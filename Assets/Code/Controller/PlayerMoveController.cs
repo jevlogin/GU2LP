@@ -134,7 +134,7 @@ namespace JevLogin
                 }
             }
 
-            if (Mathf.Abs(_playerModel.PlayerComponents.RigidbodyPlayer.velocity.y) > _playerModel.PlayerStruct.FlyThresh)
+            if (Mathf.Abs(_playerModel.PlayerComponents.RigidbodyPlayer.velocity.y - _contactPooler.GroundVelocity.y) > _playerModel.PlayerStruct.FlyThresh)
             {
                 _playerModel.PlayerStruct.AnimState = AnimState.Jump;
             }
