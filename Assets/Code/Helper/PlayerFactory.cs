@@ -28,7 +28,7 @@ namespace JevLogin
 
                 playerComponents.TransformPlayer = spawnPlayer.transform;
                 playerComponents.SpriteRenderer = spawnPlayer.GetComponent<SpriteRenderer>();
-                playerComponents.CircleCollider2D = spawnPlayer.GetComponent<CircleCollider2D>();
+                playerComponents.Collider2D = spawnPlayer.GetComponent<CircleCollider2D>();
                 playerComponents.RigidbodyPlayer = spawnPlayer.GetComponent<Rigidbody2D>();
 
                 //TODO переделать

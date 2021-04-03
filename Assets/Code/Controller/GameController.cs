@@ -89,7 +89,7 @@ namespace JevLogin
             spritePlayerAnimatorController.StartAnimation(playerInitialization.GetPlayerModel().PlayerComponents.SpriteRenderer, AnimState.Idle, true, playerInitialization.GetPlayerModel().PlayerStruct.AnimationSpeed);
             _controller.Add(spritePlayerAnimatorController);
 
-            var contactPoolerPlayer = new ContactPooler(playerInitialization.GetPlayerModel().PlayerComponents.CircleCollider2D);
+            var contactPoolerPlayer = new ContactPooler(playerInitialization.GetPlayerModel().PlayerComponents.Collider2D);
             _controller.Add(contactPoolerPlayer);
 
             var playerAnimatorController = new AnimatorController(contactPoolerPlayer, inputInitialization.GetInputProxy(), playerInitialization.GetPlayerModel(), spritePlayerAnimatorController);

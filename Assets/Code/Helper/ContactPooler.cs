@@ -13,7 +13,9 @@ namespace JevLogin
         private readonly Collider2D _collider2D;
 
         private const float _collisionTresh = 0.75f;
+        private const float _collisionNormalTresh = 1.5f;
         private int _contactCount;
+        internal Vector2 GroundVelocity;
 
         #endregion
 
@@ -53,11 +55,24 @@ namespace JevLogin
                 var normal = _contactPoint2Ds[i].normal;
                 var rigidBody = _contactPoint2Ds[i].rigidbody;
 
-                if (normal.y > _collisionTresh) IsGrounded = true;
+                if (normal.y > _collisionTresh)
+                {
+                    IsGrounded = true;
+                    if (rigidBody != null)
+                    {
+                        GroundVelocity = rigidBody.velocity;
+                    }
+                }
 
-                if (normal.x > _collisionTresh) HasLeftContact = true;
+                if (normal.x > _collisionTresh)
+                {
+                    HasLeftContact = true;
+                }
 
-                if (normal.x < -_collisionTresh) HasRightContact = true;
+                if (normal.x < -_collisionTresh)
+                {
+                    HasRightContact = true;
+                }
             }
         }
 

@@ -177,6 +177,7 @@
     <Compile Include="Assets\Code\View\QuestObjectView.cs" />
     <Compile Include="Assets\Code\View\WaterView.cs" />
     <Compile Include="Assets\Code\View\WinView.cs" />
+    <Compile Include="Assets\MovingPlatform.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />

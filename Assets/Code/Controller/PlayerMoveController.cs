@@ -72,40 +72,25 @@ namespace JevLogin
                     _newVelocity = speed * _horizontal;
                     _playerModel.PlayerComponents.TransformPlayer.localScale = _horizontal < 0 ?
                         _playerModel.PlayerStruct.LeftScale : _playerModel.PlayerStruct.RightScale;
-                    //_playerModel.PlayerStruct.AnimState = AnimState.Run;
                 }
                 else if ((_horizontal > 0 || _contactPooler.HasLeftContact) && (_horizontal < 0 || _contactPooler.HasRightContact))
                 {
                     _playerModel.PlayerComponents.TransformPlayer.localScale = _horizontal < 0 ?
                         _playerModel.PlayerStruct.LeftScale : _playerModel.PlayerStruct.RightScale;
-                    //_playerModel.PlayerStruct.AnimState = AnimState.Idle;
                 }
             }
-            //else
-            //{
-            //    _playerModel.PlayerStruct.AnimState = AnimState.Idle;
-            //    //TODO перейти на события
-            //    if (Input.GetButton(ManagerAxis.FIRE1))
-            //    {
-            //        _playerModel.PlayerStruct.AnimState = AnimState.AttackMidleOne;
-            //    }
-            //    else if (Input.GetButton(ManagerAxis.FIRE2))
-            //    {
-            //        _playerModel.PlayerStruct.AnimState = AnimState.AttackMidleTwo;
-            //    }
-            //}
-
+            
             _playerModel.PlayerComponents.RigidbodyPlayer.velocity = _playerModel.PlayerComponents.RigidbodyPlayer.velocity.Change(x: _newVelocity);
 
             if (_contactPooler.IsGrounded && _playerModel.PlayerStruct.DoJump &&
-                Mathf.Abs(_playerModel.PlayerComponents.RigidbodyPlayer.velocity.y) <= _playerModel.PlayerStruct.JumpTresh)
+                Mathf.Abs(_playerModel.PlayerComponents.RigidbodyPlayer.velocity.y - _contactPooler.GroundVelocity.y) <= _playerModel.PlayerStruct.JumpTresh)
             {
-                _playerModel.PlayerComponents.RigidbodyPlayer.AddForce(Vector2.up * _playerModel.PlayerStruct.JumpForce, ForceMode2D.Impulse);
+                _playerModel.PlayerComponents.RigidbodyPlayer.AddForce(Vector3.up * _playerModel.PlayerStruct.JumpForce, ForceMode2D.Impulse);
             }
-            //else if (Mathf.Abs(_playerModel.PlayerComponents.RigidbodyPlayer.velocity.y) > _playerModel.PlayerStruct.FlyThresh)
-            //{
-            //    _playerModel.PlayerStruct.AnimState = AnimState.Jump;
-            //}
+
+            _playerModel.PlayerComponents.RigidbodyPlayer.velocity =
+                _playerModel.PlayerComponents.RigidbodyPlayer.velocity.Change(x: _newVelocity + 
+                (_contactPooler.IsGrounded ? _contactPooler.GroundVelocity.x : 0));
         }
 
         #endregion
@@ -121,7 +106,7 @@ namespace JevLogin
 
             if (Walking)
             {
-                if ((_horizontal > 0 || !_contactPooler.HasLeftContact) && (_horizontal < 0 || !_contactPooler.HasRightContact))
+                if ((!_contactPooler.HasLeftContact) && (!_contactPooler.HasRightContact))
                 {
                     if (_playerModel.PlayerStruct.AnimState != AnimState.Run)
                     {
@@ -132,7 +117,7 @@ namespace JevLogin
                 {
                     if (_playerModel.PlayerStruct.AnimState != AnimState.Idle)
                     {
-                        _playerModel.PlayerStruct.AnimState = AnimState.Idle; 
+                        _playerModel.PlayerStruct.AnimState = AnimState.Idle;
                     }
                 }
             }
