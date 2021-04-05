@@ -87,7 +87,11 @@
     <Compile Include="Assets\Code\Controller\GenericObjectPool.cs" />
     <Compile Include="Assets\Code\Controller\GunBulletShooterController.cs" />
     <Compile Include="Assets\Code\Controller\HeightMapBasedTilemap.cs" />
+    <Compile Include="Assets\Code\Controller\HpModel.cs" />
+    <Compile Include="Assets\Code\Controller\HpViewModel.cs" />
+    <Compile Include="Assets\Code\Controller\HudController.cs" />
     <Compile Include="Assets\Code\Controller\HudFactory.cs" />
+    <Compile Include="Assets\Code\Controller\HudInitialization.cs" />
     <Compile Include="Assets\Code\Controller\ICell.cs" />
     <Compile Include="Assets\Code\Controller\ITilemap.cs" />
     <Compile Include="Assets\Code\Controller\InputController.cs" />

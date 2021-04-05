@@ -15,4 +15,5 @@ MonoBehaviour:
   _enemyDataPath: EnemyData
   _playerDataPath: PlayerData
   _waterDataPath: WaterData
-  _coinsDataPath: 
+  _coinsDataPath: Coins
+  _hudDataPath: GUI/HudData

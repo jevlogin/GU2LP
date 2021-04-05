@@ -68,10 +68,19 @@ namespace JevLogin
             var cameraController = new CameraController(_camera, playerInitialization.GetPlayerModel().PlayerComponents.TransformPlayer);
             _controller.Add(cameraController);
 
+
             #region HUDFactory
 
             var hudFactory = new HudFactory(_data.HudData);
+            var hudInitialization = new HudInitialization(hudFactory);
+            
+            _controller.Add(hudInitialization);
+
+            var hudController = new HudController(hudInitialization.HpView, playerInitialization.GetPlayerModel());
+            _controller.Add(hudController);
+
             #endregion
+
 
             #region WaterController
 

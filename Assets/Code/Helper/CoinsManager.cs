@@ -17,7 +17,7 @@ namespace JevLogin
             _playerView = playerModel.PlayerComponents.PlayerView;
             _spriteAnimatorController = spriteAnimatorController;
             _coinViews = coinViews;
-            _playerView.CollisionDetectChange += _playerView_CollisionDetectChange;
+            _playerView.ColliderDetectChange += _playerView_ColliderDetectChange;
 
             foreach (var coinView in _coinViews)
             {
@@ -25,7 +25,7 @@ namespace JevLogin
             }
         }
 
-        private void _playerView_CollisionDetectChange(Collider2D collider)
+        private void _playerView_ColliderDetectChange(Collider2D collider)
         {
             if (collider.TryGetComponent(out CoinView coinView))
             {
@@ -40,7 +40,7 @@ namespace JevLogin
       
         public void Cleanup()
         {
-            _playerView.CollisionDetectChange -= _playerView_CollisionDetectChange;
+            _playerView.ColliderDetectChange -= _playerView_ColliderDetectChange;
         }
     }
 }

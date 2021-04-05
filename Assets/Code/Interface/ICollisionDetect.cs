@@ -6,6 +6,7 @@ namespace JevLogin
 {
     public interface ICollisionDetect
     {
-        event Action<Collider2D> CollisionDetectChange;
+        event Action<Collider2D> ColliderDetectChange;
+        event Action<Collision2D> CollisionDetectChange;
     }
 }

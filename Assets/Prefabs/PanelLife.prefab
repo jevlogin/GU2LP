@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.4669811, b: 0.8521136, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -313,17 +313,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240a5fdf88ea5b044b8041c1e8ac9616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spriteRenderers:
-  - {fileID: 5407656843090688360, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: -5731162285055332302, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: 8133923789288904650, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: 5670370932310569416, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: -5388755749296596579, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: 8599707562563145997, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: -2813353791512989102, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
-  - {fileID: -1197829253625875407, guid: e9bb674b5902d2f4588d6a85ed44b97c, type: 3}
+  SpriteRenderer: {fileID: 0}
+  Image: {fileID: 8349310352281469525}
+  SpeedAnimation: 10
   _lostLife: {fileID: -8630923909508717717, guid: e9bb674b5902d2f4588d6a85ed44b97c,
     type: 3}
+  _lifes:
+  - {fileID: 8349310351064831432}
+  - {fileID: 8349310351526584136}
+  - {fileID: 8349310351656730732}
 --- !u!1 &8349310352359402149
 GameObject:
   m_ObjectHideFlags: 0

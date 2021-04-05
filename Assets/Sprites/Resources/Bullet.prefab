@@ -138,8 +138,8 @@ MonoBehaviour:
   Collider2D: {fileID: 7880450389434309068}
   SpriteRenderer: {fileID: 632779482055315695}
   Velocity: {x: 0, y: 0, z: 0}
-  DamageAttack: 0
-  LifeTime: 0
+  DamageAttack: 1
+  LifeTime: 2
   _trailRenderer: {fileID: 0}
 --- !u!96 &5677837671636882067
 TrailRenderer:

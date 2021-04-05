@@ -7,7 +7,7 @@ namespace JevLogin
     public sealed class PlayerFactory
     {
         private readonly PlayerData _playerData;
-        public GameObject Player;
+        public GameObject Player;   //TODO - проверить используется ли он?
 
         private PlayerModel _playerModel;
 

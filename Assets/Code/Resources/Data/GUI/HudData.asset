@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 881f179753a859341b4f5c589b14021a, type: 3}
   m_Name: HudData
   m_EditorClassIdentifier: 
-  _hpView: {fileID: 0}
+  _spriteAnimatorConfig: {fileID: 11400000, guid: cc2ecb2b50d58504199d9705ec060fa6,
+    type: 2}
+  _hpView: {fileID: 8349310352281469611, guid: 877c315dc7469e54fb5898e70e8b82ea, type: 3}
