@@ -76,7 +76,7 @@ namespace JevLogin
             
             _controller.Add(hudInitialization);
 
-            var hudController = new HudController(hudInitialization.HpView, playerInitialization.GetPlayerModel());
+            var hudController = new HudController(hudInitialization.HpView, playerInitialization.GetPlayerModel(), _data.PlayerData);
             _controller.Add(hudController);
 
             #endregion

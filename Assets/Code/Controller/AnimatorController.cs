@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 
 namespace JevLogin
@@ -80,6 +81,10 @@ namespace JevLogin
                 case AnimState.AttackMidleTwo:
                     _playerAnimatorController.StartAnimation(_playerModel.PlayerComponents.SpriteRenderer,
                        AnimState.AttackMidleTwo, true, _playerModel.PlayerStruct.AnimationSpeed);
+                    break;
+                case AnimState.Hurt:
+                    _playerAnimatorController.StartAnimation(_playerModel.PlayerComponents.SpriteRenderer,
+                        AnimState.Hurt, true, _playerModel.PlayerStruct.AnimationSpeed);
                     break;
                 default:
                     break;

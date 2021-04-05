@@ -10,7 +10,7 @@ namespace JevLogin
 
         public void GetAxis()
         {
-            AxisOnChange.Invoke(Input.GetAxis(ManagerAxis.VERTICAL));
+            AxisOnChange.Invoke(Input.GetAxis(ManagerAxis.JUMP));
         }
     }
 }

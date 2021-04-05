@@ -6,7 +6,15 @@ namespace JevLogin
 {
     public sealed class WinView : MonoBehaviour, ICollisionDetect
     {
+        #region Properties
+
+        public float Damage => _damage;
+
+        #endregion
+
         #region Fields
+
+        private float _damage = 1.0f;
 
         public event Action<Collider2D> ColliderDetectChange = delegate (Collider2D collider2D) { };
         public event Action<Collision2D> CollisionDetectChange = delegate (Collision2D collision) { };

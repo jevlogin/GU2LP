@@ -57,3 +57,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: c5c1a5cd449c81a42a4b4b93064daf77, type: 3}
     - {fileID: 21300000, guid: b24f7713fc292df439c0f89ff43e5ec3, type: 3}
     - {fileID: 21300000, guid: 8ddef0e18c16185408749a4402d8b3ec, type: 3}
+  - AnimState: 3
+    Sprites:
+    - {fileID: -2048800907179887802, guid: 11a9b4f1491fcf446bc80f8aea94ca6e, type: 3}
+    - {fileID: 490842205202310979, guid: 11a9b4f1491fcf446bc80f8aea94ca6e, type: 3}

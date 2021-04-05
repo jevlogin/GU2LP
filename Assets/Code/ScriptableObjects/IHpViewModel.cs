@@ -9,5 +9,7 @@ namespace JevLogin
         bool IsDead { get; }
         void ApplyDamage(float damage);
         event Action<float> OnHpChange;
+        event Action<bool> IsDeads;
+
     }
 }
