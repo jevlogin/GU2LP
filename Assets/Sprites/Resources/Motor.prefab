@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 1405242049}
   - component: {fileID: 1405242048}
   - component: {fileID: 1405242053}
-  m_Layer: 0
+  - component: {fileID: 3063040441806882966}
+  m_Layer: 11
   m_Name: Mace (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,7 +137,7 @@ TargetJoint2D:
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_Anchor: {x: 0, y: 2.73}
-  m_Target: {x: 3.1100004, y: 11.93}
+  m_Target: {x: 22.447475, y: -4.0911803}
   m_AutoConfigureTarget: 1
   m_MaxForce: 10000
   m_DampingRatio: 0.2
@@ -156,7 +157,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 2.73}
-  m_ConnectedAnchor: {x: 3.1100004, y: 14.66}
+  m_ConnectedAnchor: {x: 22.447475, y: -1.3611803}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
@@ -165,6 +166,18 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &3063040441806882966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1405242047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a10195e70eeb74d88e5b9d06ae04f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1173155473461492339
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +190,7 @@ GameObject:
   - component: {fileID: 3678926507176866202}
   - component: {fileID: 4882880388647665034}
   - component: {fileID: 4047518737443825732}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Chain-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -284,7 +297,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.35}
-  m_ConnectedAnchor: {x: 3.09, y: 14.638855}
+  m_ConnectedAnchor: {x: 22.427475, y: -1.382326}
   m_UseMotor: 1
   m_Motor:
     m_MotorSpeed: 50
@@ -302,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6048117752999383948}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Motor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -337,7 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1671891464157951569}
   - component: {fileID: 1808491583506181464}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -421,7 +434,8 @@ GameObject:
   - component: {fileID: 4978576800660237382}
   - component: {fileID: 749689875}
   - component: {fileID: 749689874}
-  m_Layer: 0
+  - component: {fileID: 2814309003352019377}
+  m_Layer: 11
   m_Name: Mace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -553,3 +567,15 @@ HingeJoint2D:
   m_AngleLimits:
     m_LowerAngle: 0
     m_UpperAngle: 359
+--- !u!114 &2814309003352019377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8218392263215097495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a10195e70eeb74d88e5b9d06ae04f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

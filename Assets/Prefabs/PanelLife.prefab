@@ -313,10 +313,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 240a5fdf88ea5b044b8041c1e8ac9616, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpriteRenderer: {fileID: 0}
-  Image: {fileID: 8349310352281469525}
-  SpeedAnimation: 10
-  _lostLife: {fileID: -8630923909508717717, guid: e9bb674b5902d2f4588d6a85ed44b97c,
+  _emptyHeart: {fileID: -8630923909508717717, guid: e9bb674b5902d2f4588d6a85ed44b97c,
+    type: 3}
+  _fullHeart: {fileID: 5407656843090688360, guid: e9bb674b5902d2f4588d6a85ed44b97c,
     type: 3}
   _lifes:
   - {fileID: 8349310351064831432}

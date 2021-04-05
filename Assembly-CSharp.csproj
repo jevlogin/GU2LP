@@ -222,6 +222,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\TrapsView.cs" />
     <None Include="Assets\Sprites\Enemy\reaper-man\Reaper_Man_1\TXT\readme.txt" />
     <None Include="Assets\Materials\Fonts\Lobster\OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

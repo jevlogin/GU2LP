@@ -5,7 +5,8 @@ namespace JevLogin
         Idle                = 0,
         Run                 = 1,
         Jump                = 2,
-        AttackMidleOne      = 3,
-        AttackMidleTwo      = 4
+        Hurt                = 3,
+        AttackMidleTwo      = 4,
+        AttackMidleOne      = 5
     }
 }
