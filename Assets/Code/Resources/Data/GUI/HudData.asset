@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5a4714a2e8546043b1cb0e8fd3ccbc4, type: 3}
-  m_Name: Data
+  m_Script: {fileID: 11500000, guid: 881f179753a859341b4f5c589b14021a, type: 3}
+  m_Name: HudData
   m_EditorClassIdentifier: 
-  _enemyDataPath: EnemyData
-  _playerDataPath: PlayerData
-  _waterDataPath: WaterData
-  _coinsDataPath: Coins
-  _hudDataPath: GUI/HudData
+  _spriteAnimatorConfig: {fileID: 11400000, guid: cc2ecb2b50d58504199d9705ec060fa6,
+    type: 2}
+  _hpView: {fileID: 8349310352281469611, guid: 877c315dc7469e54fb5898e70e8b82ea, type: 3}

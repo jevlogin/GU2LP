@@ -8,7 +8,7 @@ namespace JevLogin
     public class PlayerComponents
     {
         public SpriteRenderer SpriteRenderer;
-        public Collider2D CircleCollider2D;
+        public Collider2D Collider2D;
         public Transform TransformPlayer;
         public Rigidbody2D RigidbodyPlayer;
 

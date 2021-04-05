@@ -7,7 +7,7 @@ namespace JevLogin
     public sealed class PlayerFactory
     {
         private readonly PlayerData _playerData;
-        public GameObject Player;
+        public GameObject Player;   //TODO - проверить используется ли он?
 
         private PlayerModel _playerModel;
 
@@ -28,7 +28,7 @@ namespace JevLogin
 
                 playerComponents.TransformPlayer = spawnPlayer.transform;
                 playerComponents.SpriteRenderer = spawnPlayer.GetComponent<SpriteRenderer>();
-                playerComponents.CircleCollider2D = spawnPlayer.GetComponent<CircleCollider2D>();
+                playerComponents.Collider2D = spawnPlayer.GetComponent<CircleCollider2D>();
                 playerComponents.RigidbodyPlayer = spawnPlayer.GetComponent<Rigidbody2D>();
 
                 //TODO переделать

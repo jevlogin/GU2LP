@@ -4,8 +4,10 @@ using UnityEngine;
 
 namespace JevLogin
 {
-    public sealed class LevelObjectView : MonoBehaviour
+    public class LevelObjectView : MonoBehaviour
     {
+        #region Fields
+
         public SpriteRenderer SpriteRenderer;
         public Collider2D Collider2D;
         public Transform Transform;
@@ -13,10 +15,20 @@ namespace JevLogin
 
         public Action<LevelObjectView> OnLevelObjectContact = delegate (LevelObjectView levelObjectView) { };
 
+        #endregion
+
+
+        #region UnityMethods
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
             var levelObject = collision.GetComponent<LevelObjectView>();
-            OnLevelObjectContact.Invoke(levelObject);
+            if (levelObject != null)
+            {
+                OnLevelObjectContact.Invoke(levelObject);
+            }
         }
+
+        #endregion
     }
 }

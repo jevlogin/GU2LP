@@ -18,7 +18,7 @@ namespace JevLogin
             _playerView = playerView;
             
             _startPosition = _playerView.transform.position;
-            _playerView.CollisionDetectChange += _playerView_CollisionDetectChange;
+            _playerView.ColliderDetectChange += _playerView_CollisionDetectChange;
 
             _deathZones = deathZones;
             _winZones = winZones;
@@ -41,7 +41,7 @@ namespace JevLogin
 
         public void Cleanup()
         {
-            _playerView.CollisionDetectChange -= _playerView_CollisionDetectChange;
+            _playerView.ColliderDetectChange -= _playerView_CollisionDetectChange;
         }
     }
 }

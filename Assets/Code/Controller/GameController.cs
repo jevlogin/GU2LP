@@ -69,6 +69,19 @@ namespace JevLogin
             _controller.Add(cameraController);
 
 
+            #region HUDFactory
+
+            var hudFactory = new HudFactory(_data.HudData);
+            var hudInitialization = new HudInitialization(hudFactory);
+            
+            _controller.Add(hudInitialization);
+
+            var hudController = new HudController(hudInitialization.HpView, playerInitialization.GetPlayerModel());
+            _controller.Add(hudController);
+
+            #endregion
+
+
             #region WaterController
 
             var waterFactory = new WaterFactory(_data.WaterData);
@@ -89,7 +102,7 @@ namespace JevLogin
             spritePlayerAnimatorController.StartAnimation(playerInitialization.GetPlayerModel().PlayerComponents.SpriteRenderer, AnimState.Idle, true, playerInitialization.GetPlayerModel().PlayerStruct.AnimationSpeed);
             _controller.Add(spritePlayerAnimatorController);
 
-            var contactPoolerPlayer = new ContactPooler(playerInitialization.GetPlayerModel().PlayerComponents.CircleCollider2D);
+            var contactPoolerPlayer = new ContactPooler(playerInitialization.GetPlayerModel().PlayerComponents.Collider2D);
             _controller.Add(contactPoolerPlayer);
 
             var playerAnimatorController = new AnimatorController(contactPoolerPlayer, inputInitialization.GetInputProxy(), playerInitialization.GetPlayerModel(), spritePlayerAnimatorController);

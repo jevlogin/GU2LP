@@ -9,11 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f5a4714a2e8546043b1cb0e8fd3ccbc4, type: 3}
-  m_Name: Data
+  m_Script: {fileID: 11500000, guid: 4e84a1a2401fd9841b942ad36b6c0aa2, type: 3}
+  m_Name: QuestStoryConfig
   m_EditorClassIdentifier: 
-  _enemyDataPath: EnemyData
-  _playerDataPath: PlayerData
-  _waterDataPath: WaterData
-  _coinsDataPath: Coins
-  _hudDataPath: GUI/HudData
+  QuestConfigs:
+  - {fileID: 11400000, guid: 39b80925bd01d9542809d809cbc031e4, type: 2}
+  - {fileID: 11400000, guid: 7409ae8738f4f2a4aa2043878bd71d5e, type: 2}
+  QuestStoryType: 0

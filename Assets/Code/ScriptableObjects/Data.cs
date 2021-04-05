@@ -13,16 +13,34 @@ namespace JevLogin
         [SerializeField] private string _playerDataPath;
         [SerializeField] private string _waterDataPath;
         [SerializeField] private string _coinsDataPath;
+        [SerializeField] private string _hudDataPath;
 
         private EnemyData _enemyData;
         private PlayerData _playerData;
         private WaterData _waterData;
         private CoinsData _coinsData;
+        private HudData _hudData;
 
         #endregion
 
 
         #region Properties
+
+        public HudData HudData
+        {
+            get
+            {
+                if (_hudData == null)
+                {
+                    _hudData = Resources.Load<HudData>(Path.Combine(ManagerPath.DATA, ManagerName.HUD_DATA));
+                    if (_hudData == null)
+                    {
+                        _hudData = Resources.Load<HudData>(Path.Combine(ManagerPath.DATA, _hudDataPath));
+                    }
+                }
+                return _hudData;
+            }
+        }
 
         public CoinsData CoinsData
         {
